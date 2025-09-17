@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="?@h{_`Y)X.lOa1T|t$+z">Player</variable><variable type="KIND_SpriteKind" id="Q!YPR#Gtqcg1IE/?qr2,">Projectile</variable><variable type="KIND_SpriteKind" id="Hk^C]hM6PX?gs2Mj(@5v">Food</variable><variable type="KIND_SpriteKind" id="~}tR,DzN}$+}g2_J4n+*">Enemy</variable><variable type="KIND_SpriteKind" id="}vEM+TfDz!HoZrY#-FkU">Passenger</variable><variable id="?:ExYGzLqX_Jso%Al7k6">mySprite</variable><variable id="6?IO9U-Q8@cgISmYJlza">mySprite2</variable><variable id="IepxVml:[m~dDdHOlm~]">person</variable></variables><block type="pxt-on-start" id="vlV{sXe;Y!XLj?x)}fO8" x="0" y="0"><statement name="HANDLER"><block type="game_show_long_text" id="Za|onho;e/BD^L-+P2TI"><field name="layout">DialogLayout.Bottom</field><value name="str"><shadow type="text" id="MQ:6^/ZDqL#(ljR15`R+"><field name="TEXT">Use the arrow keys on the keyboard to pick up the passengers before time runs out!</field></shadow></value><next><block type="gamesetbackgroundcolor" id="q#SRDYA!4Xu!zJXtVx%X"><value name="color"><shadow type="colorindexpicker" id=")[;hu`@*/ZV/Y0Y+u##!"><field name="index">11</field></shadow></value><next><block type="variables_set" id="PZNV8UQ+n`3KK?vY2*wN"><field name="VAR" id="?:ExYGzLqX_Jso%Al7k6">mySprite</field><value name="VALUE"><shadow type="math_number" id="dDyh_7=`GX@QSa5J^bx/"><field name="NUM">0</field></shadow><block type="spritescreate" id="1*5fx-;p@pe;aIb$t)/d"><value name="img"><shadow type="screen_image_picker" id="T.L!@|c]dE@pM2e%tS*i"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . 3 3 3 3 3 3 3 3 . . . . 
+. . . 3 d 3 3 3 3 3 3 c 3 . . . 
+. . 3 c d 3 3 3 3 3 3 c c 3 . . 
+. 3 c c d d d d d d 3 c c d 3 d 
+. 3 c 3 a a a a a a a b c d 3 3 
+. 3 3 a b b a b b b a a b d 3 3 
+. 3 a b b b a b b b b a 3 3 3 3 
+. a a 3 3 3 a 3 3 3 3 3 a 3 3 3 
+. a a a a a a f a a a f a 3 d d 
+. a a a a a a f a a f a a a 3 d 
+. a a a a a a f f f a a a a a a 
+. a f f f f a a a a f f f a a a 
+. . f f f f f a a f f f f f a . 
+. . . f f f . . . . f f f f . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="5O^y`e3[_*aHpx(8$E;/"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="variables_set" id="Ih3ld!}_XH?}~/?jmF73"><field name="VAR" id="IepxVml:[m~dDdHOlm~]">person</field><value name="VALUE"><shadow type="math_number" id="k|t69b$0}yspjn/lQJQk"><field name="NUM">0</field></shadow><block type="spritescreate" id="FZ?I3Kh4*.4Te$$.UR59"><value name="img"><shadow type="screen_image_picker" id="ULpyEM9W.d2k*5nesAYW"><field name="img">img`
+. . . . f f f f . . . . . 
+. . f f f f f f f f . . . 
+. f f f f f f c f f f . . 
+f f f f f f c c f f f c . 
+f f f c f f f f f f f c . 
+c c c f f f e e f f c c . 
+f f f f f e e f f c c f . 
+f f f b f e e f b f f f . 
+. f 4 1 f 4 4 f 1 4 f . . 
+. f e 4 4 4 4 4 4 e f . . 
+. f f f e e e e f f f . . 
+f e f b 7 7 7 7 b f e f . 
+e 4 f 7 7 7 7 7 7 f 4 e . 
+e e f 6 6 6 6 6 6 f e e . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="hQOt^iu_=lS;/~]#4Iol"><field name="MEMBER">Passenger</field></shadow></value></block></value><next><block type="game_control_sprite" id="4g%Z[%XP/$(=Q|gVjz^H"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="uzoo~H6}wK,grM]h_s{6"><field name="VAR" id="?:ExYGzLqX_Jso%Al7k6">mySprite</field></block></value><value name="vx"><shadow type="math_number" id="g|TXck~.;iO_t!s+#]wd"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number" id="T{io^2b%H=m_uy~4gjZg"><field name="NUM">100</field></shadow></value><next><block type="mixer_play_sound" id="wtizu1SD}pl`q:(I0D_d"><field name="sound">music.baDing</field><next><block type="gamecountdown" id="NI:%/=lT1u!_]g[31Yky"><value name="duration"><shadow type="math_number" id="3VJTLItska-n,YnS2S*l"><field name="NUM">60</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="spritesoverlap" id="U5:}JTAw|bMcVHz_P%`;" x="10" y="510"><value name="HANDLER_DRAG_PARAM_sprite"><block type="argument_reporter_custom" id="lz1hE[P26#(Hp5,K:?ZQ"><mutation duplicateondrag="true" typename="Sprite"></mutation><field name="VALUE">sprite</field></block></value><value name="kind"><shadow type="spritekind" id="UO9NB4jDNyN^|T3paq=k"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><block type="argument_reporter_custom" id="$r:(Y`5GcX#WfBgae||M"><mutation duplicateondrag="true" typename="Sprite"></mutation><field name="VALUE">otherSprite</field></block></value><value name="otherKind"><shadow type="spritekind" id="IQyRl5jY?6wUm=9UV7VE"><field name="MEMBER">Passenger</field></shadow></value><statement name="HANDLER"><block type="spritesetpos" id="?tMjhjI}pZ:N4-,xzfdn"><value name="sprite"><block type="variables_get" id="aiXDk?Cax!5V}zJjzyrV"><field name="VAR" id="?:ExYGzLqX_Jso%Al7k6">mySprite</field></block></value><value name="x"><shadow type="positionPicker" id="@nWW$.V?6o~5Q4~O#gUA"><field name="index">0</field></shadow><block type="device_random" id="=0sP@P}IJbBYp|0/GX|T"><value name="min"><shadow type="math_number" id="4M/vxNG{O48Pj$Krk1o~"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="|cRSm`xL^xFxZ,mq9{fy"><field name="NUM">180</field></shadow></value></block></value><value name="y"><shadow type="positionPicker" id="[H%M|e9X;1ncj(i!jQUp"><field name="index">0</field></shadow><block type="device_random" id="T2djhqmd[GyHm}UkOZqI"><value name="min"><shadow type="math_number" id="9f_2tr{/8.KR5Ncj*l36"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="]yZ$GlY}dr5isD.CHhcM"><field name="NUM">107</field></shadow></value></block></value><next><block type="hudChangeScoreBy" id="jAwABiz.:L`D2n5J9-J9"><value name="value"><shadow type="math_number" id="X87R_+yCiD^fZA9%6bSj"><field name="NUM">1</field></shadow></value></block></next></block></statement></block></xml>
